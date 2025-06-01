@@ -35,3 +35,15 @@ out/
 
 ### VS Code ###
 .vscode/
+
+.gradle/
+build/
+
+*.iml
+.idea/
+
+# Spring Boot application config
+src/main/resources/application.yml
+
+
+

@@ -9,6 +9,7 @@ import java.util.List;
 
 @Entity
 @Getter
+@Setter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
@@ -22,5 +23,10 @@ public class Region extends BaseEntity {
     private String regionName;
 
     @OneToMany(mappedBy = "region", cascade = CascadeType.ALL)
-    private List<Region_mission> regionMissionList = new ArrayList<>();
+    private List<RegionMission> regionMissionList = new ArrayList<>();
+
+    public String getName() {
+        return regionName;
+    }
+
 }

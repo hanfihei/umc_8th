@@ -8,8 +8,9 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
+@Setter
 @Builder
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 @AllArgsConstructor
 public class Review extends BaseEntity {
 
@@ -18,12 +19,10 @@ public class Review extends BaseEntity {
     private Long id;
 
     @Column(nullable = false)
-    private Integer star;
+    private double star;
 
     @Column(columnDefinition = "TEXT")
     private String text;
-
-    private LocalDateTime createdDate;
 
     private String image;
 
