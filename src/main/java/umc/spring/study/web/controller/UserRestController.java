@@ -17,7 +17,6 @@ import umc.spring.study.apiPayload.ApiResponse;
 import umc.spring.study.apiPayload.exception.handler.GeneralException;
 import umc.spring.study.converter.ReviewConverter;
 import umc.spring.study.converter.UserConverter;
-import umc.spring.study.domain.Mission;
 import umc.spring.study.domain.Review;
 import umc.spring.study.domain.User;
 import umc.spring.study.domain.mapping.UserMission;
@@ -45,7 +44,7 @@ public class UserRestController {
 
     @PostMapping("/")
     public ApiResponse<UserResponseDTO.JoinResultDTO> join(@RequestBody @Valid UserRequestDTO.JoinDto request) {
-        User user = userCommandService.joinMember(request);
+        User user = userCommandService.joinUser(request);
         return ApiResponse.onSuccess(UserConverter.toJoinResultDTO(user));
     }
 

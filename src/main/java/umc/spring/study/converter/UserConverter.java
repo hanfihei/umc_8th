@@ -16,7 +16,7 @@ public class UserConverter {
                 .build();
     }
 
-    public static User toMember(UserRequestDTO.JoinDto request) {
+    public static User toUser(UserRequestDTO.JoinDto request) {
 
         Gender gender = null;
 
@@ -33,6 +33,10 @@ public class UserConverter {
         }
 
         return User.builder()
+                .email(request.getEmail())
+                .password(request.getPassword())
+                .role(request.getRole())
+                .phoneNumber(request.getPhoneNumber())
                 .address(request.getAddress())
                 .specAddress(request.getSpecAddress())
                 .gender(gender)

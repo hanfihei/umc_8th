@@ -8,6 +8,7 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import umc.spring.study.domain.common.BaseEntity;
 import umc.spring.study.domain.enums.Gender;
+import umc.spring.study.domain.enums.Role;
 import umc.spring.study.domain.enums.SocialType;
 import umc.spring.study.domain.enums.UserStatus;
 import umc.spring.study.domain.mapping.UserAgree;
@@ -35,11 +36,10 @@ public class User extends BaseEntity {
     @Column(nullable = false, length = 20)
     private String name;
 
-    @Column(nullable = false, length = 50)
+    @Column(length = 50, nullable = true)
     private String phoneNumber;
 
-    @Column(nullable = false, length = 50)
-    private String email;
+
 
     //@Column(nullable = false, length = 100)
     private String address;
@@ -84,4 +84,22 @@ public class User extends BaseEntity {
     /*
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<FoodChoice> foodChoiceList = new ArrayList<>(); */
+
+
+
+    //시큐리티
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @Column(nullable = false)
+    private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    public void encodePassword(String password) {
+        this.password = password;
+    }
+
+
 }

@@ -1,10 +1,12 @@
 package umc.spring.study.web.dto;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+import umc.spring.study.domain.enums.Role;
 import umc.spring.study.validation.annotation.ExistCategories;
 
 import java.util.List;
@@ -12,34 +14,49 @@ import java.util.List;
 
 public class UserRequestDTO {
 
+    @Setter
     @Getter
-    public static class JoinDto{
+    public static class JoinDto {
         @NotBlank
-        String name;
+        private String name;
         @NotNull
-        Integer gender;
+        private Integer gender;
         @NotNull
-        Integer birthYear;
+        private Integer birthYear;
         @NotNull
-        Integer birthMonth;
+        private Integer birthMonth;
         @NotNull
-        Integer birthDay;
+        private Integer birthDay;
+        @NotNull
+        private String phoneNumber;
         @Size(min = 5, max = 12)
-        String address;
+        private String address;
         @Size(min = 5, max = 12)
-        String specAddress;
+        private String specAddress;
         @ExistCategories
-        List<Long> preferCategory;
+        private List<Long> preferCategory;
+
+        //시큐리티
+        @Email
+        private String email;
+        @NotBlank
+        private String password;
+        @NotNull
+        private Role role;
+
+
+
+
+
     }
     @Getter
     @Setter
-    public static class AddMissionDto{
+    public static class AddMissionDto {
         @NotNull
         Long userId;
         @NotNull
         Long missionId;
     }
-
 }
 
 
