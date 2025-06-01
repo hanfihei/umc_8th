@@ -1,5 +1,9 @@
 package umc.spring.study.web.dto;
 
+<<<<<<< Updated upstream
+=======
+import io.swagger.v3.oas.annotations.media.Schema;
+>>>>>>> Stashed changes
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -16,6 +20,11 @@ public class UserResponseDTO {
     @AllArgsConstructor
     public static class JoinResultDTO {
         Long userId;
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
         LocalDateTime createdAt;
     }
 
@@ -47,4 +56,30 @@ public class UserResponseDTO {
         private List<MyMissionDTO> missionList;
         private int listSize;
     }
+<<<<<<< Updated upstream
+=======
+
+    @Getter
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class LoginResultDTO {
+         Long userId;
+
+        String accessToken;
+    }
+
+
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class UserInfoDTO{
+        String name;
+        String email;
+        String gender;
+    }
+
+
+>>>>>>> Stashed changes
 }

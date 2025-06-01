@@ -16,6 +16,27 @@ public class UserConverter {
                 .build();
     }
 
+<<<<<<< Updated upstream
+=======
+    public static UserResponseDTO.LoginResultDTO toLoginResultDTO(Long userId, String accessToken) {
+        return UserResponseDTO.LoginResultDTO.builder()
+                .userId(userId)
+                .accessToken(accessToken)
+                .build();
+    }
+
+    public static UserResponseDTO.UserInfoDTO toUserInfoDTO(User user){
+        return UserResponseDTO.UserInfoDTO.builder()
+                .name(user.getName())
+                .email(user.getEmail())
+                .gender(user.getGender().name())
+                .build();
+    }
+
+
+
+
+>>>>>>> Stashed changes
     public static User toUser(UserRequestDTO.JoinDto request) {
 
         Gender gender = null;

@@ -29,3 +29,13 @@ projectJDK: "17" #(Applied in CI/CD pipeline)
 
 #Specify Qodana linter for analysis (Applied in CI/CD pipeline)
 linter: jetbrains/qodana-jvm:2024.3
+<<<<<<< Updated upstream
+=======
+
+
+jwt:
+  token:
+    secretKey: umceightfightingjwttokenauthentication
+    expiration:
+      access: 14400000
+>>>>>>> Stashed changes
