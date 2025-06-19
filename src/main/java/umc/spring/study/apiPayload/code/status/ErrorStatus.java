@@ -12,13 +12,8 @@ public enum ErrorStatus implements BaseErrorCode {
 
     // 가장 일반적인 응답
     _INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "COMMON500", "서버 에러, 관리자에게 문의 바랍니다."),
-<<<<<<< Updated upstream
-    _BAD_REQUEST(HttpStatus.BAD_REQUEST,"COMMON400","잘못된 요청입니다."),
-    _UNAUTHORIZED(HttpStatus.UNAUTHORIZED,"COMMON401","인증이 필요합니다."),
-=======
     _BAD_REQUEST(HttpStatus.BAD_REQUEST, "COMMON400", "잘못된 요청입니다."),
     _UNAUTHORIZED(HttpStatus.UNAUTHORIZED, "COMMON401", "인증이 필요합니다."),
->>>>>>> Stashed changes
     _FORBIDDEN(HttpStatus.FORBIDDEN, "COMMON403", "금지된 요청입니다."),
 
     // For test
@@ -51,14 +46,11 @@ public enum ErrorStatus implements BaseErrorCode {
     MISSION_FOUND(HttpStatus.NOT_FOUND, "MISSION400", "찾음"),
 
 
-<<<<<<< Updated upstream
-=======
     // Member Error
     INVALID_PASSWORD(HttpStatus.BAD_REQUEST, "MEMBER4003", "패스워드가 불일치합니다."),
     DUPLICATE_JOIN_REQUEST(HttpStatus.BAD_REQUEST, "MEMBER4004", "해당 이메일로 이미 가입된 사용자가 존재합니다."),
     INVALID_TOKEN(HttpStatus.BAD_REQUEST, "MEMBER4005", "유효하지 않은 토큰입니다."),
 
->>>>>>> Stashed changes
     //페이지 에러
     PAGE_LESS_THAN_ONE(HttpStatus.BAD_REQUEST, "PAGE4001", "page는 1 이상의 값이여야 합니다.");
 
@@ -85,11 +77,4 @@ public enum ErrorStatus implements BaseErrorCode {
                 .build()
                 ;
     }
-<<<<<<< Updated upstream
-    public String getMessage() {
-        return message;
-    }
 }
-=======
-}
->>>>>>> Stashed changes

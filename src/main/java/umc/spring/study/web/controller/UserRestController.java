@@ -8,20 +8,14 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-<<<<<<< Updated upstream
-=======
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.servlet.http.HttpServletRequest;
->>>>>>> Stashed changes
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 import umc.spring.study.apiPayload.ApiResponse;
 import umc.spring.study.apiPayload.exception.handler.GeneralException;
 import umc.spring.study.converter.ReviewConverter;
@@ -35,10 +29,7 @@ import umc.spring.study.service.UserService.UserCommandService;
 import umc.spring.study.service.UserService.UserQueryService;
 import umc.spring.study.validation.annotation.AlreadyOngoing;
 import umc.spring.study.validation.annotation.PageError;
-<<<<<<< Updated upstream
-=======
 import umc.spring.study.web.dto.LoginSuccessResponse;
->>>>>>> Stashed changes
 import umc.spring.study.web.dto.ReviewResponseDTO;
 import umc.spring.study.web.dto.UserRequestDTO;
 import umc.spring.study.web.dto.UserResponseDTO;
@@ -54,21 +45,13 @@ public class UserRestController {
     private final ReviewQueryService reviewQueryService;
     private final UserQueryService userQueryService;
 
-<<<<<<< Updated upstream
-
-    @PostMapping("/")
-    public ApiResponse<UserResponseDTO.JoinResultDTO> join(@RequestBody @Valid UserRequestDTO.JoinDto request) {
-=======
     @PostMapping("/join")
     @Operation(summary = "유저 회원가입 API",description = "유저가 회원가입하는 API입니다.")
     public ApiResponse<UserResponseDTO.JoinResultDTO> join(@RequestBody @Valid UserRequestDTO.JoinDto request){
->>>>>>> Stashed changes
         User user = userCommandService.joinUser(request);
         return ApiResponse.onSuccess(UserConverter.toJoinResultDTO(user));
     }
 
-<<<<<<< Updated upstream
-=======
 
     @PostMapping("/login")
     @Operation(summary = "유저 로그인 API",description = "유저가 로그인하는 API입니다.")
@@ -87,7 +70,6 @@ public class UserRestController {
     }
 
 
->>>>>>> Stashed changes
     @PostMapping("/missions")
     public ApiResponse<UserResponseDTO.AddMissionResultDTO> join(@RequestBody @AlreadyOngoing @Valid UserRequestDTO.AddMissionDto request) {
         UserMission mission2 = mission2CommandService.AddMission(request);
@@ -141,8 +123,5 @@ public class UserRestController {
         return ApiResponse.onSuccess(Mission2Converter.toMyMissionListDTO(missions));
     }
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 }

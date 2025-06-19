@@ -57,8 +57,6 @@ public class UserRequestDTO {
         @NotNull
         Long missionId;
     }
-<<<<<<< Updated upstream
-=======
 
     @Getter
     @Setter
@@ -70,7 +68,6 @@ public class UserRequestDTO {
         @NotBlank(message = "패스워드는 필수입니다.")
         private String password;
     }
->>>>>>> Stashed changes
 }
 
 

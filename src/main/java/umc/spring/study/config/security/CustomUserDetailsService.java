@@ -16,18 +16,6 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-<<<<<<< Updated upstream
-        System.out.println("🔍 로그인 시도 이메일: " + username);  // 로그 추가
-
-        User user = userRepository.findByEmail(username)
-                .orElseThrow(() -> {
-                    System.out.println("❌ 사용자 없음: " + username); // 로그 추가
-                    return new UsernameNotFoundException("해당 이메일을 가진 유저가 존재하지 않습니다: " + username);
-                });
-
-        System.out.println("✅ 사용자 찾음: " + user.getEmail());
-        System.out.println("✅ DB 저장 비번: " + user.getPassword());
-=======
 
         User user = userRepository.findByEmail(username)
                 .orElseThrow(() -> {
@@ -35,7 +23,6 @@ public class CustomUserDetailsService implements UserDetailsService {
                     return new UsernameNotFoundException("해당 이메일을 가진 유저가 존재하지 않습니다: " + username);
                 });
 
->>>>>>> Stashed changes
 
         return org.springframework.security.core.userdetails.User
                 .withUsername(user.getEmail())

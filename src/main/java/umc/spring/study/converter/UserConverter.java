@@ -16,8 +16,6 @@ public class UserConverter {
                 .build();
     }
 
-<<<<<<< Updated upstream
-=======
     public static UserResponseDTO.LoginResultDTO toLoginResultDTO(Long userId, String accessToken) {
         return UserResponseDTO.LoginResultDTO.builder()
                 .userId(userId)
@@ -36,7 +34,6 @@ public class UserConverter {
 
 
 
->>>>>>> Stashed changes
     public static User toUser(UserRequestDTO.JoinDto request) {
 
         Gender gender = null;
@@ -60,7 +57,7 @@ public class UserConverter {
                 .phoneNumber(request.getPhoneNumber())
                 .address(request.getAddress())
                 .specAddress(request.getSpecAddress())
-                .gender(gender)
+                .gender(Gender.fromCode(request.getGender()))
                 .name(request.getName())
                 .userPreferList(new ArrayList<>())
                 .build();

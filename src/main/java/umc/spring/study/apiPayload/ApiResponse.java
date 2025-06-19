@@ -3,10 +3,7 @@ package umc.spring.study.apiPayload;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-<<<<<<< Updated upstream
-=======
 import io.swagger.v3.oas.annotations.media.Schema;
->>>>>>> Stashed changes
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import umc.spring.study.apiPayload.code.BaseCode;
@@ -15,10 +12,7 @@ import umc.spring.study.apiPayload.code.status.SuccessStatus;
 @Getter
 @AllArgsConstructor
 @JsonPropertyOrder({"isSuccess", "code", "message", "result"})
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 public class ApiResponse<T> {
 
     @JsonProperty("isSuccess")
@@ -29,12 +23,9 @@ public class ApiResponse<T> {
     private T result;
 
 
-<<<<<<< Updated upstream
-=======
 
 
 
->>>>>>> Stashed changes
     // 성공한 경우 응답 생성
 
     public static <T> ApiResponse<T> onSuccess(T result){
