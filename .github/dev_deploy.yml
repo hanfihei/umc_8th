@@ -1,4 +1,4 @@
-name: UMC Dev CI/CD
+name: UMC Dev CI/CD # 바꿔도됨
 
 on:
   pull_request:
