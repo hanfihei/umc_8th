@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/umc_8th?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3306/umc?serverTimezone=Asia/Seoul
     username: root
-    password: 1234
+    password: 4152410
     driver-class-name: com.mysql.cj.jdbc.Driver
 
     initialization-mode: always
