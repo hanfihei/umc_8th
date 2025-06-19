@@ -70,13 +70,16 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+def querydslDir = "src/main/generated"
+
 sourceSets {
-	main.java.srcDirs += [ querydslDir ]
+	main {
+		java {
+			srcDirs += file(querydslDir)
+		}
+	}
 }
 
-
-// Querydsl 설정부
-def querydslDir = "src/main/generated"
 
 
 configurations {
