@@ -78,9 +78,6 @@ sourceSets {
 // Querydsl 설정부
 def querydslDir = "src/main/generated"
 
-compileQuerydsl{
-	options.annotationProcessorPath = configurations.querydsl
-}
 
 configurations {
 	compileOnly {
