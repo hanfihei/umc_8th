@@ -96,6 +96,7 @@ clean {
 	delete fileTree(dir: 'src/main/generated', include: '**/*.java')
 }
 tasks.withType(JavaCompile) {
+	options.annotationProcessorGeneratedSourcesDirectory = file(querydslDir)
 	options.compilerArgs += [
 			'--add-opens',
 			'java.base/java.lang=ALL-UNNAMED',
