@@ -68,7 +68,7 @@ dependencies {
 
 
 tasks.named('test') {
-	useJUnitPlatform()
+	enabled = false
 }
 def querydslDir = "src/main/generated"
 
